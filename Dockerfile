@@ -8,7 +8,7 @@ RUN mvn clean install
 FROM eclipse-temurin:21-jre-alpine
 RUN mkdir /opt/app
 
-COPY --from=build  /opt/app/target/ProjetoMedicaoAutomatica*.jar /opt/app/ProjetoMedicaoAutomatica*.jar
+COPY --from=build  /opt/app/target/ProjetoMedicaoAutomatica*.jar /opt/app/app.jar
 WORKDIR /opt/app
 
 ENV PROFILE=prd
