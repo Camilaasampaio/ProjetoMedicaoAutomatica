@@ -1,11 +1,11 @@
-name: 01 - Actions
+name: 01 - Executar build
 
 on:
   push:
     branches: 'feature/**'
 
 jobs:
-  checkout_java_docker:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Git Checkout
