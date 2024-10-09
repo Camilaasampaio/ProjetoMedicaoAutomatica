@@ -3,7 +3,7 @@ RUN mkdir /opt/app
 COPY . /opt/app
 WORKDIR /opt/app
 
-RUN mvn clean install
+RUN mvn clean package
 
 FROM eclipse-temurin:21-jre-alpine
 RUN mkdir /opt/app
@@ -13,5 +13,5 @@ WORKDIR /opt/app
 
 ENV PROFILE=prd
 
-EXPOSE 8080
 ENTRYPOINT ["java", "-Dspring.progfiles.active=${PROFILE}", "-jar", "app.jar"]
+EXPOSE 8080

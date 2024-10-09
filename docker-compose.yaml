@@ -1,0 +1,19 @@
+services:
+  projetomedicaoautomatica-api-java:
+    image: projetomedicaoautomatica-api-java:latest
+    environment:
+      DATA_BASE_URL: "jdbc:oracle:thin:@oracle-local:1521:XE"
+      DATA_BASE_USERNAME: "system"
+      DATA_BASE_PW: "welcome123"
+    ports:
+      - "8080:8080"
+    #restart: on-failure
+    depends_on:
+      - oracle-local
+
+  oracle-local:
+    image: container-registry.oracle.com/database/express:latest
+    ports:
+      - "1521:1521"
+    environment:
+      ORACLE_PWD: "welcome123"

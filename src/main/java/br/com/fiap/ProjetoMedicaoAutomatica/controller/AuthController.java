@@ -7,8 +7,6 @@ import br.com.fiap.ProjetoMedicaoAutomatica.dto.UsuarioCadastroDTO;
 import br.com.fiap.ProjetoMedicaoAutomatica.dto.UsuarioExibicaoDTO;
 import br.com.fiap.ProjetoMedicaoAutomatica.model.Usuario;
 import br.com.fiap.ProjetoMedicaoAutomatica.service.UsuarioService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,7 +16,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
-@Api(value="API de Autenticação e Registro")
+// API de Autenticação e Registro
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
@@ -32,7 +30,7 @@ public class AuthController {
     @Autowired
     private TokenService tokenService;
 
-    @ApiOperation(value = "Realiza login na aplicação")
+    // Realiza login na aplicação
     @PostMapping("/login")
     public ResponseEntity login(@RequestBody @Valid LoginDTO loginDTO) {
         UsernamePasswordAuthenticationToken usernamePassword =
@@ -44,7 +42,7 @@ public class AuthController {
         return ResponseEntity.ok(new TokenDTO(token));
     }
 
-    @ApiOperation(value = "Registra usuário na aplicação")
+    // Registra usuário na aplicação
     @PostMapping("/register")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity registrar(@RequestBody @Valid UsuarioCadastroDTO usuarioCadastroDTO){
