@@ -47,4 +47,4 @@ jobs:
         app-name: 'fiap-medicao-api-prd'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_af5bd88f0d674a9996b337fb755f9f62 }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_04492a52e9264de4bf696b7b8ce67f72 }}/camilasampaio/projetomedicaoautomatica-api-java:${{ github.sha }}'
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_04492a52e9264de4bf696b7b8ce67f72 }}/${{ env.IMAGE_NAME}}:${{ github.sha }}'
