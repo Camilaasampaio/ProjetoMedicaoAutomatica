@@ -2,8 +2,10 @@ name: 03-Continuos Delivery - Develop
 
 on:
   push:
-    branches:
-      - develop
+    branches: "develop"
+
+env:
+  IMAGE_NAME: projetomedicaoautomatica-api-java
 
 jobs:
   build:
