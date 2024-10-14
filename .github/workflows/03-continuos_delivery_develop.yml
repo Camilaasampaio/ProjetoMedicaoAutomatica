@@ -47,4 +47,4 @@ jobs:
         app-name: 'fiap-medicao-api-dev'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_709a4aa0804c405a9952a397db1f5fab }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_31451f2220db4e03aa6a7f0119027525 }}/${{ env.IMAGE_NAME}}:${{ github.sha }}'
+        images: 'index.docker.io/${{ secrets.DOCKERHUB_USER_NAME }}/${{ env.IMAGE_NAME}}:latest'
