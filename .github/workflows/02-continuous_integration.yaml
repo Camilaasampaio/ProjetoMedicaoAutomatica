@@ -1,9 +1,8 @@
-name: 02 - Teste Pull Request
+name: 02 - Continuous Integration
 
 on:
   pull_request:
-    types: [ opened, reopened ]
-    branches: "feature/**"
+    branches: "develop"
 
 jobs:
   executar-testes:
