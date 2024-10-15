@@ -1,6 +1,8 @@
 services:
   projetomedicaoautomatica-api-java:
     image: projetomedicaoautomatica-api-java:latest
+    build:
+      dockerfile: Dockerfile
     environment:
       DATA_BASE_URL: "jdbc:mysql://guide-mysql:3306/projetomedicaoautomatica"
       DATA_BASE_USERNAME: "myuser"
