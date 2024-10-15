@@ -5,7 +5,7 @@ on:
     branches: "develop"
 
 jobs:
-  executar-testes:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Git Checkout
