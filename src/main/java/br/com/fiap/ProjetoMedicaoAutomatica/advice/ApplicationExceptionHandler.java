@@ -22,7 +22,7 @@ public class ApplicationExceptionHandler {
         List<FieldError> campos = error.getBindingResult().getFieldErrors();
 
         for (FieldError campo : campos) {
-            errorMap.put(campo.getField(), campo.getDefaultMessage());
+            errorMap.put("erro", campo.getDefaultMessage());
         }
 
         return errorMap;
