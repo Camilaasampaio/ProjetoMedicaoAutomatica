@@ -1,0 +1,22 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1730164908.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "erro"
+  ],
+  "properties": {
+    "erro": {
+      "$id": "#root/erro",
+      "title": "Erro",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "Medição da qualidade da água não encontrada no banco de dados!"
+      ],
+      "pattern": "^.*$"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1730161504.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "id",
+    "nome",
+    "endereco",
+    "cidade"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#root/id",
+      "title": "Id",
+      "type": "integer",
+      "examples": [
+        2
+      ],
+      "default": 0
+    },
+    "nome": {
+      "$id": "#root/nome",
+      "title": "Nome",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "Hospital"
+      ],
+      "pattern": "^.*$"
+    },
+    "endereco": {
+      "$id": "#root/endereco",
+      "title": "Endereco",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "Avenida Central"
+      ],
+      "pattern": "^.*$"
+    },
+    "cidade": {
+      "$id": "#root/cidade",
+      "title": "Cidade",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "São Bernardo do Campo"
+      ],
+      "pattern": "^.*$"
+    }
+  }
+}
