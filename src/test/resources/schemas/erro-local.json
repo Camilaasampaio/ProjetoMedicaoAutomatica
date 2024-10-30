@@ -1,0 +1,22 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1730161065.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "erro"
+  ],
+  "properties": {
+    "erro": {
+      "$id": "#root/erro",
+      "title": "Erro",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "Local não encontrado no banco de dados!"
+      ],
+      "pattern": "^.*$"
+    }
+  }
+}

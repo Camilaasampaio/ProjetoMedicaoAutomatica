@@ -1,0 +1,155 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1730163652.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "usuarioId",
+    "nome",
+    "email",
+    "senha",
+    "role",
+    "password",
+    "username",
+    "credentialsNonExpired",
+    "accountNonExpired",
+    "accountNonLocked",
+    "authorities",
+    "enabled"
+  ],
+  "properties": {
+    "usuarioId": {
+      "$id": "#root/usuarioId",
+      "title": "Usuarioid",
+      "type": "integer",
+      "examples": [
+        2
+      ],
+      "default": 0
+    },
+    "nome": {
+      "$id": "#root/nome",
+      "title": "Nome",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "Carlos Alberto"
+      ],
+      "pattern": "^.*$"
+    },
+    "email": {
+      "$id": "#root/email",
+      "title": "Email",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "carlos-alberto@google.com"
+      ],
+      "pattern": "^.*$"
+    },
+    "senha": {
+      "$id": "#root/senha",
+      "title": "Senha",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "12345678"
+      ],
+      "pattern": "^.*$"
+    },
+    "role": {
+      "$id": "#root/role",
+      "title": "Role",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "USER"
+      ],
+      "pattern": "^.*$"
+    },
+    "password": {
+      "$id": "#root/password",
+      "title": "Password",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "12345678"
+      ],
+      "pattern": "^.*$"
+    },
+    "username": {
+      "$id": "#root/username",
+      "title": "Username",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "carlos-alberto@google.com"
+      ],
+      "pattern": "^.*$"
+    },
+    "credentialsNonExpired": {
+      "$id": "#root/credentialsNonExpired",
+      "title": "Credentialsnonexpired",
+      "type": "boolean",
+      "examples": [
+        true
+      ],
+      "default": true
+    },
+    "accountNonExpired": {
+      "$id": "#root/accountNonExpired",
+      "title": "Accountnonexpired",
+      "type": "boolean",
+      "examples": [
+        true
+      ],
+      "default": true
+    },
+    "accountNonLocked": {
+      "$id": "#root/accountNonLocked",
+      "title": "Accountnonlocked",
+      "type": "boolean",
+      "examples": [
+        true
+      ],
+      "default": true
+    },
+    "authorities": {
+      "$id": "#root/authorities",
+      "title": "Authorities",
+      "type": "array",
+      "default": [],
+      "items":{
+        "$id": "#root/authorities/items",
+        "title": "Items",
+        "type": "object",
+        "required": [
+          "authority"
+        ],
+        "properties": {
+          "authority": {
+            "$id": "#root/authorities/items/authority",
+            "title": "Authority",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "ROLE_USER"
+            ],
+            "pattern": "^.*$"
+          }
+        }
+      }
+
+    },
+    "enabled": {
+      "$id": "#root/enabled",
+      "title": "Enabled",
+      "type": "boolean",
+      "examples": [
+        true
+      ],
+      "default": true
+    }
+  }
+}
